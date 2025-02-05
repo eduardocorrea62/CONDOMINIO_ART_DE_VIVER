@@ -1,0 +1,20 @@
+name: Enviar Mensagem Telegram
+
+on:
+  workflow_dispatch:  # Permite rodar manualmente no GitHub
+  schedule:
+    - cron: '0 12 * * *'  # Executa todo dia às 12h UTC (9h no Brasil)
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar o repositório
+        uses: actions/checkout@v3
+
+      - name: Instalar dependências
+        run: pip install requests
+
+      - name: Executar o script
+        run: python enviar_mensagem.py
