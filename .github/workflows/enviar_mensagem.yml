@@ -1,14 +1,11 @@
 name: Enviar Mensagem Telegram
 
 on:
-  workflow_dispatch:  # Permite rodar manualmente no GitHub
-  schedule:
-    - cron: '0 12 * * *'  # Executa todo dia às 12h UTC (9h no Brasil)
+  workflow_dispatch:  # Permite executar manualmente
 
 jobs:
   run-script:
     runs-on: ubuntu-latest
-
     steps:
       - name: Baixar o repositório
         uses: actions/checkout@v3
@@ -16,5 +13,10 @@ jobs:
       - name: Instalar dependências
         run: pip install requests
 
+      - name: Verificar variável de ambiente
+        run: echo "BOT_TOKEN=${{ secrets.BOT_TOKEN }}"  # Testa se a variável existe (não imprime o valor)
+
       - name: Executar o script
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}  # Passa o token como variável de ambiente
         run: python enviar_mensagem.py
