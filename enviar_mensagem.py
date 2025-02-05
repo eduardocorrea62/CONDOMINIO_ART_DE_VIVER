@@ -8,7 +8,7 @@ if not bot_token:
     exit(1)
 
 chat_ids = ["207223980", "975571557"]
-mensagem = "SUPORTE: Teste de envio de mensagem pelo GitHub Actions."
+mensagem = "SUPORTE: Prezados Usuários, estou ajustando para 65% a cisterna A e B para diminuir essa quantidade de mensagens enquanto fizemos a investigação desse comportamento e buscaremos uma solução."
 
 print(f"Token lido: {bot_token[:10]}**********")  # Exibe só parte do token por segurança
 
