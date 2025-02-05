@@ -7,7 +7,7 @@ if not bot_token:
     print("ERRO: BOT_TOKEN não foi encontrado. Verifique os Secrets no GitHub.")
     exit(1)
 
-chat_ids = ["207223980", "975571557"]
+chat_ids = ["207223980", "975571557", "7490200680"]
 mensagem = "SUPORTE: Prezados Usuários, estou ajustando para 65% a cisterna A e B para diminuir essa quantidade de mensagens enquanto fizemos a investigação desse comportamento e buscaremos uma solução."
 
 print(f"Token lido: {bot_token[:10]}**********")  # Exibe só parte do token por segurança
