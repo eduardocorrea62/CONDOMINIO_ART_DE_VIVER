@@ -1,8 +1,9 @@
-import requests  # Importação necessária
+import requests
+import os  # Importa a biblioteca para pegar variáveis de ambiente
 
-bot_token = "8111874052:AAFn_63Sh0hJUuOP4IyzeBtxNOH2dQ2n9No"
-chat_ids = ["207223980", "975571557"]  # IDs dos destinatários
-mensagem = "SUPORTE: Prezados Usuários, estou ajustando para 65% a cisterna A e B para diminuir essa quantidade de mensagens enquanto fizemos a investigação desse comportamento e buscaremos uma solução."
+bot_token = os.getenv("BOT_TOKEN")  # Busca o token do GitHub Secrets
+chat_ids = ["207223980", "975571557"]
+mensagem = "SUPORTE: Ajustamos a cisterna A e B para reduzir oscilações."
 
 for chat_id in chat_ids:
     url = f"https://api.telegram.org/bot{bot_token}/sendMessage?chat_id={chat_id}&text={mensagem}"
