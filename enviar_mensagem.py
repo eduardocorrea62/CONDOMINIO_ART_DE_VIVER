@@ -8,7 +8,7 @@ if not bot_token:
     exit(1)
 
 chat_ids = ["207223980", "975571557", "7490200680", "7700038822", "7157576413"]
-mensagem = "SUPORTE: Prezados usuários, está sendo ajustado os alertas de 75% para 65% das cisternas A e B para diminuir essa quantidade de mensagens enquanto fazemos a investigação dessas oscilações anormais de níveis."
+mensagem = "SUPORTE: Prezados usuários, identificamos ontem, sábado pela manhã, as causas do envio de tantas mensagens de alertas da cisterna B, onde as medições estão corretas mas está havendo muita oscilação dentro do tanque da cisterna B devido a formação de ondas quando ela está enchendo. Estamos pensando numa solução para evitar essa formação de onda e consequente oscilação no enchimento."
 
 print(f"Token lido: {bot_token[:10]}**********")  # Exibe só parte do token por segurança
 
