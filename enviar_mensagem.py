@@ -7,8 +7,9 @@ if not bot_token:
     print("ERRO: BOT_TOKEN não foi encontrado. Verifique os Secrets no GitHub.")
     exit(1)
 
-chat_ids = ["207223980", "975571557", "7490200680", "7700038822", "7157576413"]
-mensagem = "SUPORTE: Prezados usuários, identificamos ontem, sábado pela manhã, as causas do envio de tantas mensagens de alertas da cisterna B, onde as medições estão corretas mas está havendo muita oscilação dentro do tanque da cisterna B devido a formação de ondas quando ela está enchendo. Estamos pensando numa solução para evitar essa formação de ondas e consequente oscilação no enchimento."
+chat_ids = ["207223980"]
+
+mensagem = "SUPORTE TÉCNICO:  Seja bem vindo ao AquaMonitor, monitoramento inteligente para condomínios eficientes."
 
 print(f"Token lido: {bot_token[:10]}**********")  # Exibe só parte do token por segurança
 
